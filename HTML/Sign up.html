@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="Sign up.css">
+  </head>
+  <body>
+  <form>
+    <label>
+      <strong>Username</strong>
+        <input type="text" autocomplete="off" required>
+    </label>
+    <label>
+      <strong>password</strong>
+        <input class="password" type="password" minlength="8">
+    </label>
+    <label>
+      <strong>Confirm password</strong>
+        <input class="confirmpassword" type="password" minlength="8">
+    </label>
+    <button class="button" formaction="Signedup.html" type="submit">Sign In</button>
+  </form>
+  <script>
+    document.querySelector('.button').onclick=function(){
+      var password=document.querySelector('.password').value,
+          confirmpassword=document.querySelector('.confirmpassword').value;
+          if(password==""){
+            alert("Field cannot be empty.");
+          }
+          else if(password!=confirmpassword)
+          {
+            alert("Password didn't match try again.");
+          }
+          else if(password==confirmpassword)
+          {
+            alert("Password match.");
+          }
+          return true
+    }
+  </script>
+  </body>
+</html>
